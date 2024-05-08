@@ -3,9 +3,12 @@ server:
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/menudb
-    username: swcamp
-    password: swcamp
+#    url: jdbc:mariadb://localhost:3306/menudb
+#    username: swcamp
+#    password: swcamp
+    url: jdbc:mariadb://${rds.hostname}:${rds.port}/${rds.db.name}
+    username: ${rds.username}
+    password: ${rds.password}
 
   jpa:
     generate-ddl: false

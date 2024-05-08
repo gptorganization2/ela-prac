@@ -11,6 +11,11 @@ java {
 	sourceCompatibility = '17'
 }
 
+//빌드 시 jar 파일 하나만 생성
+jar {
+	enabled = false
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
